@@ -36,8 +36,10 @@ print(m.unlock("5678"))
 print(m.change_password("5678","abcd"))
 
 class Employee:
-    __salary=0
+    # __salary=0
     __designation=""
+    def __init__(self):
+        self.__salary=0
     def set_salary(self,salary):
         if salary>0:
             self.__salary=salary
@@ -48,7 +50,7 @@ class Employee:
     def get_designation(self):
         return self.__designation
     def increment_salary(self,percentage):
-        if percentage>0 and percentage<100:
+        if percentage>0 and percentage<30:
             self.__salary=self.__salary+(self.__salary*percentage/100)
 e=Employee()
 e.set_salary(50000)
